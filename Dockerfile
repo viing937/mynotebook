@@ -15,17 +15,17 @@ RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 RUN python3 get-pip.py
 RUN rm get-pip.py
 
-RUN pip3 --no-cache-dir install \
-    ipykernel \
-    jupyter \
-    matplotlib \
-    numpy \
-    scipy \
-    sklearn \
-    pandas \
-    Pillow \
-    tensorflow
+RUN pip3 --no-cache-dir install ipykernel jupyter
 RUN python3 -m ipykernel.kernelspec
+RUN pip3 --no-cache-dir install matplotlib
+RUN pip3 --no-cache-dir install numpy
+RUN pip3 --no-cache-dir install scipy
+RUN pip3 --no-cache-dir install sklearn
+RUN pip3 --no-cache-dir install pandas
+RUN pip3 --no-cache-dir install Pillow
+RUN pip3 --no-cache-dir install tqdm
+RUN pip3 --no-cache-dir install tensorflow
+RUN pip3 --no-cache-dir install lightgbm
 
 # TensorBoard
 EXPOSE 6006
