@@ -11,9 +11,10 @@ DIR=`pwd`
 IPYTHON=8888
 TENSORBOARD=6006
 IMAGE=mynotebook
+docker container stop "$IMAGE"
 docker run -d -it --rm \
     --name "$IMAGE" \
     --publish "$IPYTHON:$IPYTHON" \
     --publish "$TENSORBOARD:$TENSORBOARD" \
-    --volume "$DIR:/root/shared" \
+    --volume "$DIR/shared:/root/shared" \
     "$IMAGE"
