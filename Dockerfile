@@ -20,7 +20,7 @@ RUN python3 -m ipykernel.kernelspec
 RUN pip3 --no-cache-dir install matplotlib
 RUN pip3 --no-cache-dir install numpy
 RUN pip3 --no-cache-dir install scipy
-RUN pip3 --no-cache-dir install sklearn
+RUN pip3 --no-cache-dir install scikit-learn
 RUN pip3 --no-cache-dir install pandas
 RUN pip3 --no-cache-dir install Pillow
 RUN pip3 --no-cache-dir install tqdm
