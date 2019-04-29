@@ -18,6 +18,7 @@ RUN rm get-pip.py
 RUN pip3 --no-cache-dir install ipykernel jupyter
 RUN python3 -m ipykernel.kernelspec
 RUN pip3 --no-cache-dir install matplotlib
+RUN pip3 --no-cache-dir install seaborn
 RUN pip3 --no-cache-dir install numpy
 RUN pip3 --no-cache-dir install scipy
 RUN pip3 --no-cache-dir install scikit-learn
