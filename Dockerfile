@@ -27,6 +27,7 @@ RUN pip3 --no-cache-dir install Pillow
 RUN pip3 --no-cache-dir install tqdm
 RUN pip3 --no-cache-dir install tensorflow
 RUN pip3 --no-cache-dir install lightgbm
+RUN pip3 --no-cache-dir install s2sphere
 
 # TensorBoard
 EXPOSE 6006

@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/bash -x
 
 # workround: https://github.com/docker/toolbox/issues/673#issuecomment-355275054
 docker()
