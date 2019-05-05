@@ -1,4 +1,4 @@
-#!/usr/bin/bash -x
+#!/bin/bash -x
 
 docker container stop mynotebook
 docker build -t mynotebook .
