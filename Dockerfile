@@ -17,17 +17,24 @@ RUN rm get-pip.py
 
 RUN pip3 --no-cache-dir install ipykernel jupyter
 RUN python3 -m ipykernel.kernelspec
-RUN pip3 --no-cache-dir install matplotlib
-RUN pip3 --no-cache-dir install seaborn
-RUN pip3 --no-cache-dir install numpy
-RUN pip3 --no-cache-dir install scipy
-RUN pip3 --no-cache-dir install scikit-learn
-RUN pip3 --no-cache-dir install pandas
-RUN pip3 --no-cache-dir install Pillow
-RUN pip3 --no-cache-dir install tqdm
-RUN pip3 --no-cache-dir install tensorflow
-RUN pip3 --no-cache-dir install lightgbm
-RUN pip3 --no-cache-dir install s2sphere
+
+# visualization
+RUN pip3 --no-cache-dir install matplotlib \
+                                seaborn \
+                                tqdm
+
+# data science
+RUN pip3 --no-cache-dir install numpy \
+                                scipy \
+                                scikit-learn \
+                                pandas \
+                                tensorflow \
+                                lightgbm \
+                                s2sphere
+
+# misc
+RUN pip3 --no-cache-dir install requests \
+                                beautifulsoup4
 
 # TensorBoard
 EXPOSE 6006
