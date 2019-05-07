@@ -9,12 +9,10 @@ docker()
 DIR=`pwd`
 
 NOTEBOOK=8888
-TENSORBOARD=6006
 IMAGE=mynotebook
 docker container stop "$IMAGE"
 docker run -d -it --rm \
     --name "$IMAGE" \
     --publish "$NOTEBOOK:$NOTEBOOK" \
-    --publish "$TENSORBOARD:$TENSORBOARD" \
     --volume "$DIR/shared:/root/shared" \
     "$IMAGE"
