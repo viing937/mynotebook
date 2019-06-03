@@ -27,6 +27,7 @@ ENV LANG=en_US.UTF-8 \
 
 RUN python3 -m pip --no-cache-dir install \
         ipykernel \
+        ipywidgets \
         jupyterlab \
         matplotlib \
         seaborn \
@@ -40,7 +41,8 @@ RUN python3 -m pip --no-cache-dir install \
         s2sphere \
         requests \
         beautifulsoup4 && \
-    python3 -m ipykernel.kernelspec
+    python3 -m ipykernel.kernelspec && \
+    python3 -m jupyter nbextension enable --py widgetsnbextension
 
 RUN python2 -m pip --no-cache-dir install \
         ipykernel && \
@@ -49,7 +51,7 @@ RUN python2 -m pip --no-cache-dir install \
 EXPOSE 8888
 
 WORKDIR /root/shared
-CMD jupyter lab \
+CMD python3 -m jupyter lab \
     --ip='0.0.0.0' \
     --NotebookApp.token='' \
     --allow-root
