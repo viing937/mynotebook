@@ -25,6 +25,10 @@ ENV LANG=en_US.UTF-8 \
     LANGUAGE=en_US.UTF-8 \
     LC_ALL=en_US.UTF-8
 
+RUN python2 -m pip --no-cache-dir install \
+        ipykernel && \
+    python2 -m ipykernel.kernelspec
+
 RUN python3 -m pip --no-cache-dir install \
         ipykernel \
         ipywidgets \
@@ -38,15 +42,10 @@ RUN python3 -m pip --no-cache-dir install \
         pandas \
         tensorflow \
         lightgbm \
-        s2sphere \
         requests \
         beautifulsoup4 && \
     python3 -m ipykernel.kernelspec && \
     python3 -m jupyter nbextension enable --py widgetsnbextension
-
-RUN python2 -m pip --no-cache-dir install \
-        ipykernel && \
-    python2 -m ipykernel.kernelspec
 
 EXPOSE 8888
 
