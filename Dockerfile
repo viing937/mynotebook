@@ -41,6 +41,8 @@ RUN python3 -m pip --no-cache-dir install \
         scikit-learn \
         pandas \
         tensorflow \
+        torch \
+        torchvision \
         lightgbm \
         requests \
         beautifulsoup4 && \
