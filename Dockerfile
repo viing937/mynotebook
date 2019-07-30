@@ -31,7 +31,6 @@ RUN python2 -m pip --no-cache-dir install \
 
 RUN python3 -m pip --no-cache-dir install \
     ipykernel \
-    ipywidgets \
     jupyterlab \
     matplotlib \
     seaborn \
@@ -46,8 +45,7 @@ RUN python3 -m pip --no-cache-dir install \
     lightgbm \
     requests \
     beautifulsoup4 && \
-    python3 -m ipykernel.kernelspec && \
-    python3 -m jupyter nbextension enable --py widgetsnbextension
+    python3 -m ipykernel.kernelspec
 
 EXPOSE 8888
 
