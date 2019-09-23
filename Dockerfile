@@ -35,6 +35,7 @@ RUN python3 -m pip --no-cache-dir install \
     matplotlib \
     seaborn \
     tqdm \
+    pymysql \
     numpy \
     scipy \
     scikit-learn \
