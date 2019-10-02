@@ -25,11 +25,11 @@ ENV LANG=en_US.UTF-8 \
     LANGUAGE=en_US.UTF-8 \
     LC_ALL=en_US.UTF-8
 
-RUN python2 -m pip --no-cache-dir install \
+RUN python2 -m pip --no-cache-dir install -i https://pypi.tuna.tsinghua.edu.cn/simple \
     ipykernel && \
     python2 -m ipykernel.kernelspec
 
-RUN python3 -m pip --no-cache-dir install \
+RUN python3 -m pip --no-cache-dir install -i https://pypi.tuna.tsinghua.edu.cn/simple \
     ipykernel \
     jupyterlab \
     matplotlib \
@@ -48,7 +48,7 @@ RUN python3 -m pip --no-cache-dir install \
     beautifulsoup4 && \
     python3 -m ipykernel.kernelspec
 
-EXPOSE 8888
+EXPOSE 9999
 
 WORKDIR /root/shared
 CMD python3 -m jupyter lab \
