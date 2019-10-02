@@ -48,7 +48,7 @@ RUN python3 -m pip --no-cache-dir install -i https://pypi.tuna.tsinghua.edu.cn/s
     beautifulsoup4 && \
     python3 -m ipykernel.kernelspec
 
-EXPOSE 9999
+EXPOSE 8888
 
 WORKDIR /root/shared
 CMD python3 -m jupyter lab \
