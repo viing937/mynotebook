@@ -25,6 +25,11 @@ ENV LANG=en_US.UTF-8 \
     LANGUAGE=en_US.UTF-8 \
     LC_ALL=en_US.UTF-8
 
+RUN python2 -m pip --no-cache-dir install --upgrade -i https://pypi.tuna.tsinghua.edu.cn/simple \
+    pip setuptools && \
+    python3 -m pip --no-cache-dir install --upgrade -i https://pypi.tuna.tsinghua.edu.cn/simple \
+    pip setuptools
+
 RUN python2 -m pip --no-cache-dir install -i https://pypi.tuna.tsinghua.edu.cn/simple \
     ipykernel && \
     python2 -m ipykernel.kernelspec
