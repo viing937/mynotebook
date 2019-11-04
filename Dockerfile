@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:19.10
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
@@ -25,16 +25,16 @@ ENV LANG=en_US.UTF-8 \
     LANGUAGE=en_US.UTF-8 \
     LC_ALL=en_US.UTF-8
 
-RUN python2 -m pip --no-cache-dir install --upgrade -i https://pypi.tuna.tsinghua.edu.cn/simple \
+RUN python2 -m pip --no-cache-dir install --upgrade \
     pip setuptools && \
-    python3 -m pip --no-cache-dir install --upgrade -i https://pypi.tuna.tsinghua.edu.cn/simple \
+    python3 -m pip --no-cache-dir install --upgrade \
     pip setuptools
 
-RUN python2 -m pip --no-cache-dir install -i https://pypi.tuna.tsinghua.edu.cn/simple \
+RUN python2 -m pip --no-cache-dir install \
     ipykernel && \
     python2 -m ipykernel.kernelspec
 
-RUN python3 -m pip --no-cache-dir install -i https://pypi.tuna.tsinghua.edu.cn/simple \
+RUN python3 -m pip --no-cache-dir install \
     ipykernel \
     jupyterlab \
     matplotlib \
