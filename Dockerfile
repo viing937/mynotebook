@@ -2,14 +2,10 @@ FROM ubuntu:19.10
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-    build-essential \
     curl \
+    build-essential \
     ca-certificates \
     locales \
-    python \
-    python-dev \
-    python-pip \
-    python-setuptools \
     python3 \
     python3-dev \
     python3-pip \
@@ -25,16 +21,12 @@ ENV LANG=en_US.UTF-8 \
     LANGUAGE=en_US.UTF-8 \
     LC_ALL=en_US.UTF-8
 
-RUN python2 -m pip --no-cache-dir install --upgrade \
-    pip setuptools && \
-    python3 -m pip --no-cache-dir install --upgrade \
+RUN python3 -m pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+RUN python3 -m pip --no-cache-dir install --upgrade \
     pip setuptools
 
-RUN python2 -m pip --no-cache-dir install \
-    ipykernel && \
-    python2 -m ipykernel.kernelspec
-
-RUN python3 -m pip --no-cache-dir install \
+RUN python3 -m pip --no-cache-dir install --upgrade \
     ipykernel \
     jupyterlab \
     matplotlib \
