@@ -1,0 +1,16 @@
+beautifulsoup4
+ipykernel
+jupyterlab
+lightgbm
+matplotlib
+numpy
+pandas
+pymysql
+requests
+scikit-learn
+scipy
+seaborn
+tensorflow
+torch
+torchvision
+tqdm
