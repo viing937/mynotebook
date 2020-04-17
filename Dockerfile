@@ -21,8 +21,6 @@ ENV LANG=en_US.UTF-8 \
     LANGUAGE=en_US.UTF-8 \
     LC_ALL=en_US.UTF-8
 
-RUN python3 -m pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-
 RUN python3 -m pip --no-cache-dir install --upgrade pip setuptools
 
 COPY requirements.txt /tmp/requirements.txt
