@@ -6,6 +6,7 @@ lightgbm
 matplotlib
 numpy
 pandas
+pydash
 pymysql
 requests
 scikit-learn
