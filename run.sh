@@ -1,6 +1,8 @@
 #!/bin/bash -x
 set -e -o pipefail
 
+cd `dirname $0`
+
 DIR=`pwd`
 NOTEBOOK=9999
 IMAGE=mynotebook
