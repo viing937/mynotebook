@@ -2,13 +2,13 @@
 set -e -o pipefail
 
 cd `dirname $0`
-
+NAME=mynotebook
+PORT=9999
 DIR=`pwd`
-NOTEBOOK=9999
-IMAGE=mynotebook
-docker container stop "$IMAGE" || true
+
+docker container stop "$NAME" || true
 docker run -d -it --rm \
-    --name "$IMAGE" \
-    --publish "$NOTEBOOK:8888" \
+    --name "$NAME" \
+    --publish "$PORT:8888" \
     --volume "$DIR/shared:/root/shared" \
-    "$IMAGE"
+    "ving/mynotebook"
