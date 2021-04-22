@@ -7,6 +7,7 @@ PORT=9999
 DIR=`pwd`
 
 docker container stop "$NAME" || true
+docker container rm "$NAME" || true
 docker run -d \
     --name "$NAME" \
     --publish "$PORT:8888" \
