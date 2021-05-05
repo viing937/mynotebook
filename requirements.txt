@@ -1,7 +1,5 @@
 beautifulsoup4
 clickhouse-driver
-ipykernel
-jupyterlab
 lightgbm
 matplotlib
 numpy
