@@ -13,4 +13,4 @@ docker run -d \
     --publish "$PORT:8888" \
     --restart=always \
     --volume "$DIR/shared:/root/shared" \
-    "ving/mynotebook"
+    "ving/mynotebook:latest"
