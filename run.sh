@@ -3,7 +3,7 @@ set -e -o pipefail
 
 cd `dirname $0`
 NAME=mynotebook
-PORT=9999
+PORT=19999
 DIR=`pwd`
 
 docker container stop "$NAME" || true
