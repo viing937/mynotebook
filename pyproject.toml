@@ -3,11 +3,11 @@ name = "mynotebook"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.14"
 dependencies = [
-    "numpy>=2.0.2",
-    "pandas>=2.3.3",
-    "pycryptodome>=3.23.0",
-    "requests>=2.32.5",
-    "tqdm>=4.67.1",
+    "numpy",
+    "pandas",
+    "pycryptodome",
+    "requests",
+    "tqdm",
 ]
